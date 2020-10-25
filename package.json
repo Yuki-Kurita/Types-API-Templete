@@ -8,8 +8,9 @@
     "test": "jest",
     "start": "node dist/server.js",
     "build": "tsoa spec-and-routes && tsc",
+    "heroku-postbuild": "tsoa spec-and-routes && tsc",
     "ts-node": "ts-node",
-    "routes": "tsoa routes"
+    "spec": "tsoa spec-and-routes"
   },
   "repository": {
     "type": "git",
