@@ -2,12 +2,14 @@
   "name": "Tactics_API",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon",
     "test": "jest",
-    "build": "tsc",
-    "ts-node": "ts-node"
+    "start": "node build/server.js",
+    "build": "tsoa spec-and-routes && tsc",
+    "ts-node": "ts-node",
+    "routes": "tsoa routes"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/ReverseTone/Tactics_API#readme",
   "devDependencies": {
+    "@types/body-parser": "^1.19.0",
     "@types/express": "^4.17.8",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.14.2",
@@ -39,6 +42,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "tsoa": "^3.4.0"
   }
 }
