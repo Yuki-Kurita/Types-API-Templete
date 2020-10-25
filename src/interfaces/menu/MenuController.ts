@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   Patch,
+  Path,
   Post,
   Route,
   SuccessResponse,
@@ -39,8 +40,8 @@ export class MenuController extends Controller {
   /**
    * メニューを単体取得する
    */
-  @Get()
-  public async getMenu(): Promise<MenuResponse> {
+  @Get("{menuId}")
+  public async getMenu(@Path() menuId: string): Promise<MenuResponse> {
     const menu: MenuResponse = {
       menuId: 1,
       trainingName: "test_training",
