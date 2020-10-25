@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsoa spec-and-routes && nodemon",
     "test": "jest",
-    "start": "node build/server.js",
+    "start": "node dist/server.js",
     "build": "tsoa spec-and-routes && tsc",
     "ts-node": "ts-node",
     "routes": "tsoa routes"
